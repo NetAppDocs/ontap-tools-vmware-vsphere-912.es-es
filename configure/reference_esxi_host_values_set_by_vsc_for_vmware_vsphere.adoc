@@ -1,0 +1,121 @@
+---
+permalink: configure/reference_esxi_host_values_set_by_vsc_for_vmware_vsphere.html 
+sidebar: sidebar 
+keywords:  
+summary: Es posible configurar tiempos de espera y otros valores en los hosts ESXi mediante las herramientas de ONTAP para VMware vSphere con el fin de garantizar el mejor rendimiento y una conmutación al respaldo correcta. Los valores que conjuntos de herramientas de ONTAP se basan en pruebas internas de NetApp. 
+---
+= Los valores de host de ESXi se establecen mediante herramientas de ONTAP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es posible configurar tiempos de espera y otros valores en los hosts ESXi mediante las herramientas de ONTAP para VMware vSphere con el fin de garantizar el mejor rendimiento y una conmutación al respaldo correcta. Los valores que conjuntos de herramientas de ONTAP se basan en pruebas internas de NetApp.
+
+Puede configurar los siguientes valores en un host ESXi:
+
+
+
+== Configuración avanzada de ESXi
+
+* *VMFS3.HardwaraceleratedLocking*
++
+Debe establecer este valor en 1.
+
+* *VMFS3.EnableBlockDelete*
++
+Debe configurar este valor en 0.
+
+
+
+
+
+== Configuración de NFS
+
+* *Net.TcpipHeapSize*
++
+Establezca este valor en 32.
+
+* *Net.TcpipHeapMax*
++
+Establezca este valor en 1024MB.
+
+* *NFS.MaxVolumes*
++
+Establezca este valor en 256.
+
+* *NFS41.MaxVolumes*
++
+Establezca este valor en 256.
+
+* *NFS.MaxQueueDepth*
++
+Defina este valor en 128 o superior para evitar cuellos de botella en cola.
+
+* *NFS.HeartbeatMaxFailures*
++
+Establezca este valor en 10 para todas las configuraciones de NFS.
+
+* *NFS.HeartbeatFrequency*
++
+Establezca este valor en 12 para todas las configuraciones de NFS.
+
+* *NFS.HeartbeatTimeout*
++
+Establezca este valor en 5 para todas las configuraciones de NFS.
+
+
+
+
+
+== Configuración de FC/FCoE
+
+* *Política de selección de ruta*
++
+Establezca este valor en «`RR`» (por turnos) cuando se utilicen rutas FC con ALUA.
+
++
+Establezca este valor en «`FIJO`» para todas las demás configuraciones.
+
++
+Establecer este valor en «'RR'» ayuda a proporcionar equilibrio de carga en todas las rutas activas/optimizadas. El valor "'FIXED'" se utiliza para configuraciones antiguas y no ALUA y ayuda a evitar las operaciones de E/S proxy
+
+* *Disk.QFullSampleSize*
++
+Establezca este valor en 32 para todas las configuraciones. Si configura este valor, se evitan los errores de I/O.
+
+* *Disk.QFullThreshold*
++
+Establezca este valor en 8 para todas las configuraciones. Si configura este valor, se evitan los errores de I/O.
+
+* *Tiempos de espera de HBA FC Emulex*
++
+Se utiliza el valor predeterminado.
+
+* *Tiempo de espera de HBA FC QLogic*
++
+Se utiliza el valor predeterminado.
+
+
+
+
+
+== Configuración de iSCSI
+
+* *Política de selección de ruta*
++
+Establezca este valor en «`RR`» para todas las rutas de iSCSI.
+
++
+Establecer este valor en «'RR'» ayuda a proporcionar equilibrio de carga en todas las rutas activas/optimizadas.
+
+* *Disk.QFullSampleSize*
++
+Establezca este valor en 32 para todas las configuraciones. Si configura este valor, se evitan los errores de I/O.
+
+* *Disk.QFullThreshold*
++
+Establezca este valor en 8 para todas las configuraciones. Si configura este valor, se evitan los errores de I/O.
+
+

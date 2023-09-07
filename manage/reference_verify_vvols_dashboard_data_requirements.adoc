@@ -1,0 +1,31 @@
+---
+permalink: manage/reference_verify_vvols_dashboard_data_requirements.html 
+sidebar: sidebar 
+keywords: vVol dashboard 
+summary: 'Debe verificar algunos requisitos importantes del panel vVols para mostrar detalles dinámicos de los almacenes de datos \(vVols\) de VMware Virtual Volumes y las máquinas virtuales.' 
+---
+= Requisitos de datos del panel de vVols
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Debe verificar algunos requisitos importantes del panel vVols para mostrar detalles dinámicos de los almacenes de datos y las máquinas virtuales de VMware Virtual Volumes (vVols).
+
+La siguiente tabla muestra una descripción general de lo que debe comprobar si el panel de vVols no muestra las métricas de rendimiento para los almacenes de datos DE SAN vVols aprovisionados y las máquinas virtuales.
+
+|===
+| *Consideraciones* | *Descripción* 
+
+
+ a| 
+Sistema de almacenamiento
+ a| 
+* Utiliza ONTAP 9,7 o posterior.
+* Se utilizan credenciales adecuadas para el sistema de almacenamiento.
+* El sistema de almacenamiento es activo y accesible.
+* La máquina virtual seleccionada debe utilizar al menos un almacén de datos vVols, y las operaciones de I/o se están ejecutando en el disco de la máquina virtual.
+
+
+|===

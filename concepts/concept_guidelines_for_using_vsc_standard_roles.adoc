@@ -1,0 +1,40 @@
+---
+permalink: concepts/concept_guidelines_for_using_vsc_standard_roles.html 
+sidebar: sidebar 
+keywords:  
+summary: Cuando trabaja con las herramientas estándar de ONTAP® para funciones de VMware vSphere, hay algunas directrices que debe seguir. 
+---
+= Directrices para usar los roles estándar de las herramientas de ONTAP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Cuando trabaja con las herramientas estándar de ONTAP® para funciones de VMware vSphere, hay algunas directrices que debe seguir.
+
+No debe modificar directamente los roles estándar. Si lo hace, las herramientas de ONTAP sobrescribirán los cambios cada vez que actualice las herramientas de ONTAP. Installer actualiza las definiciones de rol estándar cada vez que actualiza las herramientas de ONTAP. Al hacer esto, se garantiza que los roles sean actualizados para la versión de las herramientas de ONTAP, así como para todas las versiones compatibles de vCenter Server.
+
+Sin embargo, puede usar los roles estándar para crear roles que se ajusten a su entorno. Para ello, debe copiar el rol estándar de herramientas de ONTAP y, a continuación, editar el rol copiado. Al crear una nueva función, puede mantener esta función incluso cuando reinicie o actualice el servicio Windows de las herramientas de ONTAP.
+
+Algunas de las formas en que puede utilizar las funciones estándar de ONTAP Tools incluyen las siguientes:
+
+* Utilice los roles de herramientas estándar de ONTAP para todas las tareas de herramientas de ONTAP.
++
+En este escenario, los roles estándar proporcionan todos los privilegios que un usuario necesita para realizar las tareas de las herramientas de ONTAP.
+
+* Combinar roles para expandir las tareas que un usuario puede realizar.
++
+Si los roles de ONTAP Tools estándar proporcionan demasiada granularidad para su entorno, puede expandir los roles creando grupos de nivel superior que contengan varios roles.
+
++
+Si un usuario debe ejecutar otras tareas de herramientas que no son de ONTAP y que requieren privilegios nativos adicionales de vCenter Server, puede crear un rol que proporcione dichos privilegios y añadirlo al grupo también.
+
+* Cree funciones más detalladas.
++
+Si su empresa requiere que implemente funciones que son más restrictivas que las funciones de herramientas estándar de ONTAP, puede utilizar las funciones de herramientas de ONTAP para crear nuevas funciones.
+
++
+En este caso, debe clonar los roles de herramientas ONTAP necesarios y, a continuación, editar el rol clonado para que solo tenga los privilegios que necesite el usuario.
+
+

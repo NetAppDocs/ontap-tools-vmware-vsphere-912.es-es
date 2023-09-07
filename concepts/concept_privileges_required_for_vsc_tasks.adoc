@@ -1,0 +1,32 @@
+---
+permalink: concepts/concept_privileges_required_for_vsc_tasks.html 
+sidebar: sidebar 
+keywords:  
+summary: Las diferentes herramientas de ONTAP para las tareas de VMware vSphere requieren diferentes combinaciones de privilegios específicos de las herramientas de ONTAP y los privilegios nativos de vCenter Server. 
+---
+= Privilegios requeridos para las tareas de herramientas de ONTAP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Las diferentes herramientas de ONTAP para las tareas de VMware vSphere requieren diferentes combinaciones de privilegios específicos de las herramientas de ONTAP y los privilegios nativos de vCenter Server.
+
+En el artículo de la base de conocimientos de NetApp 1032542, encontrará información sobre los privilegios requeridos para las tareas de las herramientas ONTAP.
+
+https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Virtual_Storage_Console_for_VMware_vSphere/How_to_configure_RBAC_for_Virtual_Storage_Console["Cómo configurar RBAC para Virtual Storage Console"]
+
+
+
+== Privilegios a nivel de producto que requieren las herramientas de ONTAP para VMware vSphere
+
+Para tener acceso a las herramientas ONTAP para la interfaz gráfica de usuario de VMware vSphere, es necesario contar con el privilegio View específico para las herramientas ONTAP para el producto asignado en el nivel de objeto de vSphere correspondiente. Si inicia sesión sin este privilegio, las herramientas de ONTAP muestran un mensaje de error al hacer clic en el icono de NetApp y le impiden acceder a las herramientas de ONTAP.
+
+En el privilegio *Ver*, puede acceder a la GUI de herramientas de ONTAP. Este privilegio no le permite realizar tareas dentro de las herramientas de ONTAP. Para ejecutar tareas de herramientas ONTAP, es necesario contar con los privilegios nativos y específicos de ONTAP para esas tareas.
+
+El nivel de asignación determina qué porciones de la interfaz de usuario se muestran. Al asignar el privilegio View en el objeto raíz (carpeta), es posible acceder a las herramientas de ONTAP haciendo clic en el icono NetApp.
+
+Es posible asignar el privilegio View a otro nivel de objeto de vSphere. No obstante, de esta forma se limitan los menús de herramientas de ONTAP que se pueden ver y usar.
+
+El objeto raíz es el lugar recomendado para asignar cualquier permiso que contiene el privilegio View.
