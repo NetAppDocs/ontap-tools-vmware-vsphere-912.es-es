@@ -157,7 +157,6 @@
   <block id="caeb76e03a32069563fffdb32d55954a" category="admonition">En Site Recovery Manager (SRM), los recursos pueden ser pools de recursos, hosts ESXi o clústeres de vSphere.</block>
   <block id="8ac32f6a8aa36578bdfe17eaa1b09d09" category="list-text">Inicie sesión en vCenter Server y haga clic en *Site Recovery* &gt; *Sites*.</block>
   <block id="881a8180069b4ef6ce578dc05747c26c" category="list-text">En la ficha Administrar, seleccione *asignaciones de recursos*.</block>
-  <block id="3a51cbdda8b1a9e5c79cbbe920b9311d" category="list-text">Haga clic en la <block ref="40f23597e3247b9bac7d35bb74d1ef6a" category="inline-image-macro-rx" type="image"></block> icono para crear una nueva asignación de recursos.</block>
   <block id="ca61b18f56707ba483d313f4fd42d21b" category="paragraph">Aparece el asistente Create Resource Mapping (Crear asignación de recursos).</block>
   <block id="20586b09df186411bee0e3968b2ef2dd" category="list-text">En el asistente Create Resource Mapping, realice lo siguiente:</block>
   <block id="32a6b23557bb5ddc3323c7e77b4b97a4" category="list-text">Seleccione *preparar automáticamente asignaciones para recurso con nombres coincidentes* y haga clic en *Siguiente*.</block>
@@ -738,7 +737,6 @@ Puede personalizar la forma en que se enumeran las cinco máquinas virtuales pri
   <block id="b6b2c55f92e8e04471c740483e69a795" category="paragraph">Puede aumentar o reducir el tamaño de un almacén de datos NFS, pero en el caso de un almacén de datos VMFS, solo puede aumentar el tamaño. También se admite el redimensionamiento de los almacenes de datos con la opción de crecimiento y reducción automáticos de los almacenes de datos FlexGroup. Un FlexGroup que forma parte de un almacén de datos tradicional y un volumen FlexVol que forma parte de un almacén de datos vVols no se puede reducir por debajo del tamaño existente, pero que puede crecer como máximo del 120 %. Las Snapshot predeterminadas están habilitadas en estos volúmenes de FlexGroup y FlexVol.</block>
   <block id="1b837800f24f729eb8e73a102257c0bd" category="admonition">Si utiliza plataformas de almacenamiento de tipo cabina All SAN (ASA) con ONTAP 9.9.1 o posterior, solo podrá crear almacenes de datos vVols con un tamaño de vmdk superior a 16 TB.</block>
   <block id="0e6fc56cbe91d72cb03e33a904ae9ab3" category="list-text">En el panel de navegación, seleccione el centro de datos que contiene el almacén de datos.</block>
-  <block id="a15d1bf5dee929fddbf2e03ae0f830e9" category="list-text">Haga clic con el botón derecho en el almacén de datos y seleccione *Herramientas de ONTAP de NetApp* &gt; *asignar QoS*.</block>
   <block id="425e99780c82b74f333dd7da3068f492" category="list-text">En el cuadro de diálogo Cambiar tamaño, especifique un nuevo tamaño para el almacén de datos y, a continuación, haga clic en *Aceptar*.</block>
   <block id="29b33d6a4971ded7e90ffb22fa8e685d" category="paragraph">Puede ejecutar la opción *REDISCOVER ALL* en el menú sistemas de almacenamiento para actualizar manualmente el listado de almacenamiento en Storage Systems y el panel, o esperar la próxima actualización programada.</block>
   <block id="37cb7cba8a11cb5f31e25fa717c59190" category="summary">Puede editar un almacén de datos de VMware Virtual Volumes \(vVols\) existente para cambiar el perfil de capacidad de almacenamiento predeterminado. El perfil de capacidad de almacenamiento predeterminado se utiliza principalmente para vVols de intercambio.</block>
@@ -2136,7 +2134,6 @@ Consulte lo siguiente para obtener toda la información.</block>
   <block id="bbf1057ad175e1e1664e224351019ac9" category="sidebar">Utilidad de importación de NetApp: Vídeo</block>
   <block id="72393f9ef0b6b69526a30ac7ce5276bc" category="sidebar">Comunidad de NetApp: Herramientas de ONTAP</block>
   <block id="a80f3275e655b331da24a4073b9c6ed4" category="sidebar">Herramientas de ONTAP para documentos de VMware vSphere 9,12</block>
-  <block id="ed9018b2e8611a3d2c03bb6a205b9715" category="sidebar">Herramientas de ONTAP para VMware vSphere</block>
   <block id="f724dfae8a2bb3b34e049dcedf88d10d" category="sidebar">Proteja los almacenes de datos y las máquinas virtuales</block>
   <block id="754290325c2ec09a93b1e1ede0871001" category="sidebar">Habilite Storage Replication Adapter para proteger almacenes de datos</block>
   <block id="30dcbadaeab2008f15a279a602f8b6e2" category="sidebar">Configuración del sistema de almacenamiento para la recuperación ante desastres</block>
@@ -2170,4 +2167,7 @@ Consulte lo siguiente para obtener toda la información.</block>
   <block id="f98484fc38c578aca640fd781e7196ae" category="sidebar">Configurar los almacenes de datos</block>
   <block id="13b48cbdd252f4608b35c2d647aacc28" category="sidebar">Puesta en marcha y actualización de herramientas de ONTAP</block>
   <block id="578d9149fa04c3d4f2229ad419fbfec3" category="sidebar">Requisitos para poner en marcha las herramientas de ONTAP</block>
+  <block id="c482036287311326fe268e793e8592b0" category="inline-image-macro">nueva asignación de recursos</block>
+  <block id="3f8ca314615f7ceccc4e80b9ecdd18e7" category="list-text">Haga clic en la <block ref="b0cd4e998161741b4ab585ccd5066812" category="inline-image-macro-rx" type="image"></block> icono para crear una nueva asignación de recursos.</block>
+  <block id="bdc5a4ba1115f3f724e1f81e7f41eeef" category="list-text">Haga clic con el botón derecho en el almacén de datos y seleccione *Herramientas de NetApp ONTAP* &gt; *Cambiar tamaño de almacén de datos que no sea vVols*.</block>
 </blocks>
