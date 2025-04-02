@@ -1,5 +1,10 @@
 ---
 indexpage:
+  title: Herramientas de ONTAP para documentación de VMware vSphere
+  summary: Las herramientas de ONTAP para VMware vSphere permiten configurar, gestionar
+    y proteger los almacenes de datos virtuales en el entorno de vCenter Server.
+  keywords: ontap tools for vmware vsphere, ontap 9.11, deploy, configure, data store,
+    high availability
   lead: Las herramientas de ONTAP para VMware vSphere permiten configurar, gestionar
     y proteger los almacenes de datos virtuales en el entorno de vCenter Server.
   tiles:
@@ -45,6 +50,6 @@ indexpage:
     - title: Base de conocimientos de NetApp - Herramientas de ONTAP
       url: https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/VSC_and_VASA_Provider
     - title: 'Utilidad de importación de NetApp: Vídeo'
-      url: https://www.youtube.com/watch?v=CEQmIEzNVfA
+      url: https://www.youtube.com/watch?v=aFKyPEx67Dk
     - title: 'Comunidad de NetApp: Herramientas de ONTAP'
       url: https://community.netapp.com/t5/VMware-Solutions-Discussions/bd-p/vmware-solutions-discussions
